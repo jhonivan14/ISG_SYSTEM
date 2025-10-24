@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Assistants&#39; Evaluation Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-200 py-10">
+    <main class="mx-auto w-full max-w-5xl rounded-xl border border-slate-300 bg-white shadow-lg">
+        <header class="border-b border-slate-200 px-10 py-8">
+            <h1 class="text-center text-2xl font-semibold uppercase tracking-wide text-slate-800">Student Assistants&#39; Evaluation Form</h1>
+
+            <div class="mt-6 grid gap-4 text-sm text-slate-700 md:grid-cols-2">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4">
+                        <span class="w-48 font-medium">Name of Student Assistant</span>
+                        <div class="h-8 flex-1 border-b border-slate-400"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-48 font-medium">Semester &amp; School Year</span>
+                        <div class="h-8 flex-1 border-b border-slate-400"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-48 font-medium">Area of Assignment</span>
+                        <div class="h-8 flex-1 border-b border-slate-400"></div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4">
+                        <span class="w-40 font-medium">Head of Office</span>
+                        <div class="h-8 flex-1 border-b border-slate-400"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-40 font-medium">Date of Evaluation</span>
+                        <div class="h-8 flex-1 border-b border-slate-400"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-6 text-justify text-xs leading-relaxed text-slate-600">
+                <span class="font-semibold">Direction:</span> Please rate each item below to determine the performance of the assigned student assistant of your respective office/department. Select the appropriate rating for every item.
+            </p>
+        </header>
+
+        <section class="px-10 py-6">
+            <div class="overflow-hidden rounded-lg border border-slate-300 text-sm text-slate-700">
+                <table class="min-w-full border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100">
+                            <th class="w-16 border border-slate-300 px-3 py-3 text-left font-semibold">Scale</th>
+                            <th class="w-48 border border-slate-300 px-3 py-3 text-left font-semibold">Verbal Description</th>
+                            <th class="border border-slate-300 px-3 py-3 text-left font-semibold">Verbal Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-3 font-semibold">4</td>
+                            <td class="border border-slate-300 px-3 py-3">Excellent</td>
+                            <td class="border border-slate-300 px-3 py-3 text-xs leading-5">This rating is given to student assistants who consistently exceed expectations and demonstrate outstanding performance in their assigned tasks.</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-3 font-semibold">3</td>
+                            <td class="border border-slate-300 px-3 py-3">Good</td>
+                            <td class="border border-slate-300 px-3 py-3 text-xs leading-5">This rating is given to student assistants who consistently meet expectations and perform their assigned tasks satisfactorily.</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-3 font-semibold">2</td>
+                            <td class="border border-slate-300 px-3 py-3">Fair</td>
+                            <td class="border border-slate-300 px-3 py-3 text-xs leading-5">This rating is given to student assistants who occasionally meet expectations but may have some areas for improvement.</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-3 font-semibold">1</td>
+                            <td class="border border-slate-300 px-3 py-3">Poor</td>
+                            <td class="border border-slate-300 px-3 py-3 text-xs leading-5">This rating is given to student assistants who consistently fail to meet expectations and demonstrate unsatisfactory performance in their assigned tasks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <form class="mt-8 overflow-hidden rounded-lg border border-slate-300">
+                <table class="min-w-full border-collapse text-sm text-slate-700">
+                    <thead>
+                        <tr class="bg-slate-100">
+                            <th class="w-16 border border-slate-300 px-3 py-2 text-left font-semibold"></th>
+                            <th class="border border-slate-300 px-3 py-2 text-left font-semibold">Criteria</th>
+                            <th class="w-24 border border-slate-300 px-3 py-2 text-center font-semibold">Excellent<br><span class="text-xs">(4)</span></th>
+                            <th class="w-24 border border-slate-300 px-3 py-2 text-center font-semibold">Good<br><span class="text-xs">(3)</span></th>
+                            <th class="w-24 border border-slate-300 px-3 py-2 text-center font-semibold">Fair<br><span class="text-xs">(2)</span></th>
+                            <th class="w-24 border border-slate-300 px-3 py-2 text-center font-semibold">Poor<br><span class="text-xs">(1)</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-blue-50/60 font-semibold">
+                            <td colspan="6" class="border border-slate-300 px-3 py-2">A. Quality and Quantity of Work</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">A.1</td>
+                            <td class="border border-slate-300 px-3 py-2">Accurate at work assigned</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a1" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a1" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a1" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a1" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-2">A.2</td>
+                            <td class="border border-slate-300 px-3 py-2">Always completes tasks</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a2" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a2" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a2" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a2" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">A.3</td>
+                            <td class="border border-slate-300 px-3 py-2">Works in a timely manner</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a3" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a3" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a3" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a3" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-2">A.4</td>
+                            <td class="border border-slate-300 px-3 py-2">Asks for more work when assigned tasks are done</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a4" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a4" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a4" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a4" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">A.5</td>
+                            <td class="border border-slate-300 px-3 py-2">Easily accepts new responsibilities</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a5" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a5" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a5" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-a5" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-100 font-semibold">
+                            <td class="border border-slate-300 px-3 py-2" colspan="2">Total</td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                        </tr>
+
+                        <tr class="bg-blue-50/60 font-semibold">
+                            <td colspan="6" class="border border-slate-300 px-3 py-2">B. Interpersonal Skills</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">B.1</td>
+                            <td class="border border-slate-300 px-3 py-2">Answers patrons&#39; questions accurately</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b1" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b1" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b1" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b1" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-2">B.2</td>
+                            <td class="border border-slate-300 px-3 py-2">Deals with patrons well</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b2" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b2" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b2" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b2" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">B.3</td>
+                            <td class="border border-slate-300 px-3 py-2">Deals with personnel well</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b3" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b3" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b3" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b3" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-2">B.4</td>
+                            <td class="border border-slate-300 px-3 py-2">Knows how to effectively communicate with others</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b4" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b4" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b4" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b4" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">B.5</td>
+                            <td class="border border-slate-300 px-3 py-2">Has a good relationship with other student assistants</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b5" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b5" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b5" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-b5" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-100 font-semibold">
+                            <td class="border border-slate-300 px-3 py-2" colspan="2">Total</td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                        </tr>
+
+                        <tr class="bg-blue-50/60 font-semibold">
+                            <td colspan="6" class="border border-slate-300 px-3 py-2">C. Attendance and Reliability</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">C.1</td>
+                            <td class="border border-slate-300 px-3 py-2">Perfect attendance</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c1" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c1" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c1" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c1" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-2">C.2</td>
+                            <td class="border border-slate-300 px-3 py-2">Reports duty on time; rarely comes late</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c2" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c2" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c2" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c2" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">C.3</td>
+                            <td class="border border-slate-300 px-3 py-2">Following assigned schedule</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c3" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c3" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c3" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c3" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="border border-slate-300 px-3 py-2">C.4</td>
+                            <td class="border border-slate-300 px-3 py-2">Able to work without direct supervision</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c4" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c4" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c4" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c4" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-slate-300 px-3 py-2">C.5</td>
+                            <td class="border border-slate-300 px-3 py-2">Carries out instructions successfully</td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c5" value="4" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c5" value="3" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c5" value="2" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                            <td class="border border-slate-300 text-center">
+                                <input type="radio" name="score-c5" value="1" class="h-4 w-4 text-slate-900 focus:ring-yellow-400" />
+                            </td>
+                        </tr>
+                        <tr class="bg-slate-100 font-semibold">
+                            <td class="border border-slate-300 px-3 py-2" colspan="2">Total</td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                        </tr>
+
+                        <tr class="bg-slate-100 font-semibold">
+                            <td class="border border-slate-300 px-3 py-2" colspan="2">Over-all Total</td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                            <td class="border border-slate-300"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+            <div class="mt-8 space-y-6 text-sm text-slate-700">
+                <div>
+                    <p class="font-semibold">D. Strength(s)/Areas for Improvement:</p>
+                    <div class="mt-2 h-16 rounded-lg border border-dashed border-slate-300"></div>
+                </div>
+                <div>
+                    <p class="font-semibold">E. Evaluator&#39;s Comment(s)/Recommendation:</p>
+                    <div class="mt-2 h-16 rounded-lg border border-dashed border-slate-300"></div>
+                </div>
+            </div>
+
+            <div class="mt-10 flex justify-end">
+                <div class="w-64 text-center text-sm text-slate-700">
+                    <div class="h-10 border-b border-slate-400"></div>
+                    <p class="mt-2 italic">Evaluator&#39;s Signature</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
