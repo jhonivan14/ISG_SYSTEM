@@ -8,6 +8,8 @@
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <!-- Charts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <style>
    /* Custom scrollbar for sidebar */
     ::-webkit-scrollbar {
@@ -54,7 +56,7 @@
        </span>
       </li>
       <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
-       <i class="fas fa-check-to-slot w-5">
+       <i class="fas fa-solid fa-thumbs-up w-5">
        </i>
        <span>
         Approved Applications
@@ -64,22 +66,42 @@
        <i class="fas fa-file-alt w-5">
        </i>
        <span>
-        Scholarship Applications
+       Qualifying Exam Result
        </span>
       </li>
-      <hr class="border-[#0d8ddb]"/>
       <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
        <i class="fas fa-check-circle w-5">
        </i>
        <span>
-        Interview Scheduling
+        Interview Evaluation
        </span>
       </li>
       <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
-       <i class="fas fa-file-invoice-dollar w-5">
+       <i class="fas fa-star w-5">
        </i>
        <span>
-        Financial Aid
+        Applicant Ranks
+       </span>
+      </li>
+      <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
+       <i class="fas fa-list w-5">
+       </i>
+       <span>
+        List Of Qualified
+       </span>
+      </li>
+      <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
+       <i class="fas fa-building w-5">
+       </i>
+       <span>
+        Departmental Evaluation
+       </span>
+      </li>
+      <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
+       <i class="fas fa-flag w-5">
+       </i>
+       <span>
+        Summary Evaluation Report
        </span>
       </li>
       <li class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer">
@@ -170,43 +192,27 @@
      </div>
     </section>
     <!-- Icon grid -->
-    <section class="px-6 py-6 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
-     <button class="flex flex-col items-center justify-center border border-[#0d8ddb] rounded bg-white p-3 text-xs text-[#fcdc2f] font-semibold" type="button">
-      <i class="fas fa-user-graduate text-[#0d8ddb] mb-1 text-lg">
-      </i>
-      Applicants
-     </button>
-    
-     <button class="flex flex-col items-center justify-center border border-[#0d8ddb] rounded bg-white p-3 text-xs text-[#fcdc2f] font-semibold" type="button">
-      <i class="fas fa-file-alt text-[#0d8ddb] mb-1 text-lg">
-      </i>
-      Applications
-     </button>
-     <button class="flex flex-col items-center justify-center border border-[#0d8ddb] rounded bg-white p-3 text-xs text-[#fcdc2f] font-semibold" type="button">
-      <i class="fas fa-check-circle text-[#0d8ddb] mb-1 text-lg">
-      </i>
-      Interviews
-     </button>
-  
-     <button class="flex flex-col items-center justify-center border border-[#0d8ddb] rounded bg-white p-3 text-xs text-[#fcdc2f] font-semibold" type="button">
-      <i class="fas fa-chart-line text-[#0d8ddb] mb-1 text-lg">
-      </i>
-      Reports
-     </button>
-     <button class="flex flex-col items-center justify-center border border-[#0d8ddb] rounded bg-white p-3 text-xs text-[#fcdc2f] font-semibold" type="button">
-      <i class="fas fa-cogs text-[#0d8ddb] mb-1 text-lg">
-      </i>
-      Settings
-     </button>
-     <button class="flex flex-col items-center justify-center border border-[#0d8ddb] rounded bg-white p-3 text-xs text-[#fcdc2f] font-semibold" type="button">
-      <i class="fas fa-user-circle text-[#0d8ddb] mb-1 text-lg">
-      </i>
-      Profile
-     </button>
-   
-    
+    <br>
+    <!-- Charts -->
+    <section class="px-6 space-y-6">
+      <!-- Applicants Statistical Report (Bar Chart) -->
+      <div class="bg-gray-50 border border-[#0d8ddb] rounded p-4">
+        <div class="text-[#052c6a] text-sm font-semibold mb-2">Applicants Statistical Report</div>
+        <div class="border-2 border-[#0d8ddb] rounded">
+          <canvas id="applicantsBarChart" class="w-full h-80"></canvas>
+        </div>
+      </div>
+
+      <!-- Trends (Line Chart) -->
+      <div class="bg-gray-50 border border-[#0d8ddb] rounded p-4">
+        <div class="text-[#052c6a] text-sm font-semibold mb-2">Yearly Trend</div>
+        <div class="border-2 border-[#0d8ddb] rounded">
+          <canvas id="trendLineChart" class="w-full h-80"></canvas>
+        </div>
+      </div>
     </section>
     <!-- Table -->
+     <br>
     <section class="px-6 pb-6 overflow-x-auto">
      <table class="w-full border border-[#0d8ddb] text-xs text-center">
       <thead>
@@ -360,8 +366,121 @@
        </tr>
       </tbody>
      </table>
-    </section>
-   </main>
-  </div>
+   </section>
+  </main>
+ </div>
+  <script>
+  // Chart.js helpers for consistent styling
+  const brandBlue   = '#0d8ddb';
+  const brandNavy   = '#052c6a';
+  const brandYellow = '#fcdc2f';
+
+  // handy RGBA for brand colors
+  const purpleBlueFill   = 'rgba(106, 110, 230, 0.9)';
+  const tealBlueFill = 'rgba(65, 155, 180, 0.9)';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // === BAR CHART: grouped by YEAR with 1st & 2nd Sem per year ===
+    const barLabels = ['2025', '2026', '2027', '2028'];
+    // values per year
+    const firstSem  = [190, 270, 380, 330];
+    const secondSem = [250, 210, 300, 160];
+
+    const barCtx = document.getElementById('applicantsBarChart');
+    if (barCtx && window.Chart) {
+      new Chart(barCtx, {
+        type: 'bar',
+        data: {
+          labels: barLabels,
+          datasets: [
+            {
+              label: '1st Sem',
+              data: firstSem,
+              backgroundColor: purpleBlueFill,
+              borderColor: brandNavy,
+              borderWidth: 1,
+              barPercentage: 0.8,
+              categoryPercentage: 0.7,
+            },
+            {
+              label: '2nd Sem',
+              data: secondSem,
+              backgroundColor: tealBlueFill,
+              borderColor: brandNavy,
+              borderWidth: 1,
+              barPercentage: 0.8,
+              categoryPercentage: 0.7,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              ticks: { color: brandNavy },
+              grid: { color: 'rgba(0,0,0,0.05)' }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: { color: brandNavy },
+              grid: { color: 'rgba(0,0,0,0.08)' }
+            }
+          },
+          plugins: {
+            legend: { labels: { color: brandNavy } },
+            tooltip: { enabled: true },
+          }
+        }
+      });
+    }
+
+    // === LINE CHART (unchanged: yearly trend) ===
+    const trendCtx = document.getElementById('trendLineChart');
+    if (trendCtx && window.Chart) {
+      new Chart(trendCtx, {
+        type: 'line',
+        data: {
+          labels: ['2025', '2026', '2027', '2028'],
+          datasets: [
+            {
+              label: 'Applicants',
+              data: [320, 150, 290, 40],
+              borderColor: '#c81dff',
+              backgroundColor: 'rgba(200, 29, 255, 0.15)',
+              pointBackgroundColor: '#ffffff',
+              pointBorderColor: '#c81dff',
+              pointRadius: 4,
+              tension: 0.3,
+            },
+            {
+              label: 'Qualified',
+              data: [310, 160, 300, 45],
+              borderColor: '#ccff33',
+              backgroundColor: 'rgba(204, 255, 51, 0.15)',
+              pointBackgroundColor: '#ffffff',
+              pointBorderColor: '#ccff33',
+              pointRadius: 4,
+              tension: 0.3,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { ticks: { color: brandNavy }, grid: { color: 'rgba(0,0,0,0.05)' } },
+            y: { beginAtZero: true, ticks: { color: brandNavy }, grid: { color: 'rgba(0,0,0,0.08)' } }
+          },
+          plugins: {
+            legend: { labels: { color: brandNavy } },
+            tooltip: { enabled: true },
+          }
+        }
+      });
+    }
+  });
+</script>
+
  </body>
 </html>
