@@ -80,7 +80,7 @@
         <header class="pb-3">
             <div class="flex flex-col items-center gap-4 text-center md:grid md:grid-cols-[160px,1fr,160px] md:items-center">
                 <div class="flex justify-center md:justify-start">
-                    <img src="img/SMCCNEWLOGO.png" alt="Seal of Saint Michael College of Caraga" class="h-20 w-20 object-contain" />
+                    <img src="../img/SMCCNEWLOGO.png" alt="Seal of Saint Michael College of Caraga" class="h-20 w-20 object-contain" />
                 </div>
                 <div>
                     <h1 class="text-[20px] font-bold leading-tight text-[#3a3a6e]">Saint Michael College of Caraga</h1>
@@ -89,7 +89,7 @@
                     <p class="text-[12px] leading-tight">Website: <a href="http://www.smccnasipit.edu.ph" class="text-[#3a3a6e] underline">www.smccnasipit.edu.ph</a>, Email: <a href="mailto:communications@smccnasipit.edu.ph" class="text-[#3a3a6e] underline">communications@smccnasipit.edu.ph</a></p>
                 </div>
                 <div class="flex justify-center md:justify-end">
-                    <img src="img/SOCO-PAB-1024x672.jpg" alt="SOCOTEC ISO 9001 logo" class="h-20 w-20 object-contain" />
+                    <img src="../img/SOCO-PAB-1024x672.jpg" alt="SOCOTEC ISO 9001 logo" class="h-20 w-20 object-contain" />
                 </div>
             </div>
         </header>

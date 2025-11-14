@@ -41,7 +41,7 @@
       <header>
         <div class="header-top">
           <div class="header-left">
-            <img src="img/SMCCNEWLOGO.png" alt="Seal of Saint Michael College of Caraga" />
+            <img src="../img/SMCCNEWLOGO.png" alt="Seal of Saint Michael College of Caraga" />
             <div class="header-left-text">
               <h1 class="text-center">Saint Michael College of Caraga</h1>
               <p class="text-center">Brgy. 4, Nasipit, Agusan del Norte, Philippines</p>
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="header-right">
-            <img src="img/SOCO-PAB-1024x672.jpg" alt="SOCOTEC ISO 9001 logo" />
+            <img src="../img/SOCO-PAB-1024x672.jpg" alt="SOCOTEC ISO 9001 logo" />
           </div>
         </div>
       </header>
@@ -103,7 +103,7 @@
       <div class="mt-8 grid grid-cols-1 gap-6 max-w-3xl">
         <div>
           <div class="subtle mb-1">Prepared by:</div>
-          <div class="font-semibold">ARLYN B. TUYOGON</div>
+          <div class="font-semibold">ARLYN B. TUYOGON, MMBM</div>
           <div class="sig-role">Head, Admission &amp; Scholarship</div>
         </div>
 
