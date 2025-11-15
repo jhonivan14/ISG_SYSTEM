@@ -244,8 +244,7 @@
                 </select>
               </div>
               <div class="flex items-center gap-2">
-                <button class="px-3 py-1 text-xs rounded bg-[#003b7d] text-white" onclick="window.print()">Print</button>
-                <a href="admindashboard.php" class="px-3 py-1 text-xs rounded border">Back</a>
+                <button class="px-6 py-1 text-xs rounded bg-[#003b7d] text-white" onclick="window.print()">Print</button>
               </div>
             </div>
             <div class="overflow-x-auto mt-3">
