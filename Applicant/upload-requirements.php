@@ -135,7 +135,8 @@ $grants = [
   ],
 ];
 
-$id = $_GET["grant"] ?? 0;
+// Prefer POST (gikan Step 2), fallback to GET (direct link)
+$id = $_POST["grant_id"] ?? $_GET["grant"] ?? 0;
 $selected = $grants[$id] ?? null;
 ?>
 <!DOCTYPE html>
@@ -143,7 +144,7 @@ $selected = $grants[$id] ?? null;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Upload Requirements</title>
+  <title>Upload Requirements • Step 3</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -166,28 +167,50 @@ $selected = $grants[$id] ?? null;
         <p class="text-[10px] sm:text-xs text-blue-100 uppercase tracking-[0.18em]">
           SMCC Admission and Scholarship Office
         </p>
-        <h1 class="text-white text-sm sm:text-base font-semibold leading-tight">
-          Institutional Scholarship Grants • Step 2
-        </h1>
+        <div class="flex flex-wrap items-center gap-2">
+          <h1 class="text-white text-sm sm:text-base font-semibold leading-tight">
+            Institutional Scholarship Grants
+          </h1>
+          <span class="inline-flex items-center gap-1 px-2 py-[2px] rounded-full bg-white/10 text-[10px] sm:text-[11px] text-blue-50">
+            Step 3 of 3
+          </span>
+        </div>
+        <p class="text-[10px] sm:text-xs text-blue-100">
+          Upload Documentary Requirements
+        </p>
       </div>
     </div>
   </header>
 
   <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-    <!-- Back link -->
-    <div class="flex items-center justify-between gap-2 mb-4">
-      <a href="applicationReq.php"
-         class="inline-flex items-center gap-1 text-xs sm:text-sm text-[#0d8ddb] hover:text-[#052c6a] hover:underline">
-        <span>←</span>
-        <span>Back to ISG List</span>
-      </a>
+    <!-- Progress -->
+    <section class="mb-4 sm:mb-6">
+      <div class="max-w-md mx-auto mb-3">
+        <div class="flex items-center justify-between text-[11px] sm:text-xs font-semibold text-[#052c6a]/80 mb-1">
+          <span>Step 1: List & Requirements</span>
+          <span>Step 2: Application Form</span>
+          <span class="text-[#0d8ddb]">Step 3: Upload</span>
+        </div>
+        <div class="h-1.5 rounded-full bg-[#dbe6ff] overflow-hidden">
+          <div class="h-full w-full bg-gradient-to-r from-[#0d8ddb] via-[#0d8ddb] to-[#fcdc2f]"></div>
+        </div>
+      </div>
 
-      <?php if ($selected): ?>
-        <span class="text-[10px] sm:text-xs text-[#052c6a]/70">
-          Selected: <span class="font-semibold"><?php echo htmlspecialchars($selected["title"]); ?></span>
-        </span>
-      <?php endif; ?>
-    </div>
+      <!-- Back link + selected -->
+      <div class="flex items-center justify-between gap-2">
+        <a href="applicationReq.php"
+           class="inline-flex items-center gap-1 text-xs sm:text-sm text-[#0d8ddb] hover:text-[#052c6a] hover:underline">
+          <span>←</span>
+          <span>Back to ISG List</span>
+        </a>
+
+        <?php if ($selected): ?>
+          <span class="text-[10px] sm:text-xs text-[#052c6a]/70">
+            Selected: <span class="font-semibold"><?php echo htmlspecialchars($selected["title"]); ?></span>
+          </span>
+        <?php endif; ?>
+      </div>
+    </section>
 
     <!-- Page title -->
     <section class="mb-4 sm:mb-6">
@@ -207,7 +230,7 @@ $selected = $grants[$id] ?? null;
           <?php echo $selected ? htmlspecialchars($selected["title"]) : "Select a Scholarship"; ?>
         </h3>
         <p class="text-[10px] sm:text-xs text-blue-100 tracking-[0.25em] uppercase">
-          Step 2 • Upload Requirements
+          Step 3 • Upload Requirements
         </p>
       </div>
 
@@ -231,6 +254,7 @@ $selected = $grants[$id] ?? null;
           </div>
 
           <form action="submit_upload.php" method="POST" enctype="multipart/form-data" class="space-y-4 sm:space-y-5">
+            <!-- carry grant id to backend -->
             <input type="hidden" name="grant_id" value="<?php echo htmlspecialchars($id); ?>">
 
             <!-- Show list of requirements (summary) -->
@@ -247,8 +271,8 @@ $selected = $grants[$id] ?? null;
 
             <hr class="border-dashed border-[#d3defe] my-3">
 
-            <!-- File inputs (one per requirement) with DECLINE button -->
-            <?php foreach ($selected["requirements"] as $index => $req): 
+            <!-- File inputs (one per requirement) with CLEAR button -->
+            <?php foreach ($selected["requirements"] as $index => $req):
               $inputId = 'file-' . $index;
             ?>
               <div class="space-y-1">
@@ -272,14 +296,13 @@ $selected = $grants[$id] ?? null;
                     accept=".pdf,.jpg,.jpeg,.png"
                   >
 
-                  <!-- DECLINE / CLEAR BUTTON -->
                   <button
                     type="button"
                     onclick="clearFileInput('<?php echo $inputId; ?>')"
                     class="inline-flex items-center justify-center px-3 py-1.5 text-[11px] sm:text-xs
                            rounded-full border border-red-400 text-red-600 bg-red-50
                            hover:bg-red-100 hover:border-red-500">
-                    Decline / Clear
+                    Clear File
                   </button>
                 </div>
               </div>
@@ -305,11 +328,7 @@ $selected = $grants[$id] ?? null;
     function clearFileInput(id) {
       const input = document.getElementById(id);
       if (!input) return;
-
-      // optional: confirm
-      if (confirm("Are you sure you want to clear this file?")) {
-        input.value = ""; // clears selected file
-      }
+      input.value = "";
     }
   </script>
 </body>

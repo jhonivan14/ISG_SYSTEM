@@ -3,38 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ISG List and Requirements</title>
+  <title>ISG List and Requirements • Step 1</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-[#e0f2ff] via-white to-[#e0f2ff] font-sans">
+<body class="min-h-screen bg-gradient-to-b from-[#e0f2ff] via-white to-[#e0f2ff] font-sans flex flex-col">
   <!-- TOP NAV / BRAND -->
-  <header class="bg-gradient-to-r from-[#052c6a] via-[#0d8ddb] to-[#1d4ed8] shadow-lg">
+  <header class="bg-gradient-to-r from-[#052c6a] via-[#0d8ddb] to-[#1d4ed8] shadow-lg sticky top-0 z-20">
     <div class="max-w-6xl mx-auto flex items-center gap-3 px-4 sm:px-6 py-3">
       <img
         src="../img/SMCCNEWLOGO.png"
         alt="SMCC Logo"
-        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover bg-white shadow-md"
+        class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover bg-white shadow-md border border-white"
       />
       <div>
-        <p class="text-xs sm:text-sm text-blue-100 uppercase tracking-[0.18em]">
+        <p class="text-[10px] sm:text-xs text-blue-100 uppercase tracking-[0.18em]">
           SMCC Admission and Scholarship Office
         </p>
-        <h1 class="text-white text-base sm:text-lg font-semibold">
+        <h1 class="text-white text-sm sm:text-lg font-semibold leading-tight">
           Institutional Scholarship Grants
         </h1>
+        <p class="text-[10px] sm:text-xs text-blue-100/80">
+          Step 1 of 3 • View ISG List and Requirements
+        </p>
       </div>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-6">
-    <!-- PAGE TITLE -->
-    <section class="text-center space-y-2">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0b63d1] tracking-wide drop-shadow-sm">
-        ISG LIST AND REQUIREMENTS
-      </h2>
-      <p class="text-xs sm:text-sm text-[#052c6a]/80 max-w-2xl mx-auto">
-        Please review each scholarship grant and prepare the requirements before uploading.
-      </p>
+  <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-6">
+    <!-- PAGE TITLE + STEP BAR -->
+    <section class="space-y-4">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0b63d1] tracking-wide drop-shadow-sm">
+          ISG LIST AND REQUIREMENTS
+        </h2>
+        <p class="text-xs sm:text-sm text-[#052c6a]/80 max-w-2xl mx-auto">
+          Step 1: Review each scholarship grant or discount and prepare your requirements.
+          In Step 2 you will fill out the application form, and in Step 3 you will upload your documents.
+        </p>
+      </div>
+
+      <!-- STEP PROGRESS BAR -->
+      <div class="max-w-xl mx-auto">
+        <div class="flex justify-between text-[10px] sm:text-xs font-semibold text-[#052c6a]/80 mb-2">
+          <span class="text-[#0d8ddb]">Step 1: List & Requirements</span>
+          <span>Step 2: Application Form</span>
+          <span>Step 3: Upload Documents</span>
+        </div>
+        <div class="h-1.5 rounded-full bg-[#dbe6ff] overflow-hidden">
+          <div class="h-full w-1/3 bg-gradient-to-r from-[#0d8ddb] to-[#fcdc2f]"></div>
+        </div>
+      </div>
     </section>
 
     <!-- NOTE CARD -->
@@ -48,17 +66,20 @@
       </div>
       <div class="text-xs sm:text-sm text-[#052c6a]">
         <p>
-          <span class="font-bold text-red-600">Note:</span>
+          <span class="font-bold text-red-600">Important Reminder:</span>
           Non-compliance with any of the requirements listed under each grant, or with
           any provision of the scholarship contract, will be a ground for the forfeiture
           of the scholarship program.
+        </p>
+        <p class="mt-1 text-[11px] sm:text-xs text-[#052c6a]/80">
+          Make sure your documents are complete and clearly scanned before you proceed to the application form.
         </p>
       </div>
     </section>
 
     <!-- ============ 1. STUDENT ASSISTANT ============ -->
     <section
-      class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden"
+      class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5"
     >
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
@@ -141,21 +162,21 @@
 
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p class="text-[11px] sm:text-xs text-[#052c6a]/80 text-center sm:text-left">
-            Prepare clear scanned copies of all documents before uploading.
+            When you are ready, click apply to proceed to the application form for Student Assistant.
           </p>
           <button
             type="button"
-            onclick="goUpload(1)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(1)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 2. ACADEMIC SCHOLARSHIP PROGRAM ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -203,17 +224,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(2)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(2)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 3. ESG PRESIDENT SCHOLARSHIP PROGRAM ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -253,17 +274,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(3)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(3)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 4. KABAYANI SCHOLARSHIP PROGRAM ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -307,17 +328,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(4)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(4)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 5. KABAYANI LOYALTY GRANT ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -358,17 +379,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(5)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(5)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 6. PWD DISCOUNT ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -407,17 +428,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(6)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(6)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS DISCOUNT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 7. DISCOUNT FOR CHILDREN OF EMPLOYEES ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -458,17 +479,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(7)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(7)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS DISCOUNT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 8. DISCOUNT FOR SIBLING OF EMPLOYEES ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -508,17 +529,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(8)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(8)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS DISCOUNT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 9. SIBLING DISCOUNT ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -555,17 +576,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(9)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(9)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS DISCOUNT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 10. DXSM-FM GRANT ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -575,7 +596,7 @@
             10. DXSM-FM Grant
           </h3>
         </div>
-        <span class="inline-flex items-center rounded-full bg-white/90 text-[#0d8ddb] text-[11px] sm:text-xs font-semibold px-3 py-1 shadow">
+        <span class="inline-flex items-center rounded-full bg:white/90 bg-white/90 text-[#0d8ddb] text-[11px] sm:text-xs font-semibold px-3 py-1 shadow">
           DXSM-FM
         </span>
       </div>
@@ -604,17 +625,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(10)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(10)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 11. MICHAELINIAN MIRROR GRANT ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -652,23 +673,23 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(11)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(11)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text:white text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 12. GRANT FOR THE DEPENDENTS OF A LOT DONOR ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
             Grant Category
           </p>
-          <h3 class="text-lg sm:text-xl font-extrabold text-white">
+          <h3 class="text-lg sm:text-xl font-extrabold text:white text-white">
             12. Grant for the Dependents of a Lot Donor
           </h3>
         </div>
@@ -705,17 +726,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(12)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(12)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 13. GRANT FOR DEPENDENTS OF BOT MEMBER ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -760,17 +781,17 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(13)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(13)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS GRANT
           </button>
         </div>
       </div>
     </section>
 
     <!-- ============ 14. SMCC ALUMNI DISCOUNT ============ -->
-    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden">
+    <section class="bg-white/95 backdrop-blur rounded-3xl shadow-xl border border-[#cddfff] overflow-hidden transition hover:shadow-2xl hover:-translate-y-0.5">
       <div class="bg-gradient-to-r from-[#0d8ddb] to-[#052c6a] px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
         <div>
           <p class="text-[11px] sm:text-xs text-blue-100 uppercase tracking-[0.25em]">
@@ -808,19 +829,43 @@
         <div class="pt-2 flex justify-center">
           <button
             type="button"
-            onclick="goUpload(14)"
-            class="inline-flex items-center justify-center gap-2 bg-[#fcdc2f] hover:bg-[#ffe658] text-[#052c6a] font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+            onclick="goApply(14)"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0d8ddb] hover:bg-[#0b63d1] text-white font-semibold text-sm sm:text-base px-8 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
           >
-            UPLOAD DOCUMENTS
+            APPLY FOR THIS DISCOUNT
           </button>
         </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL CTA -->
+    <section class="pt-2">
+      <div class="bg-white/85 border border-[#d3e2ff] rounded-2xl shadow-sm px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-[11px] sm:text-xs text-[#052c6a]/80 text-center sm:text-left">
+          Already reviewed the grants and discounts? You may now proceed to
+          <span class="font-semibold text-[#0d8ddb]">Step 2: Application Form</span>.
+          Selecting a grant above will automatically pass the grant type.
+        </p>
+        <button
+          type="button"
+          onclick="goApply(null)"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold text-xs sm:text-sm px-6 sm:px-7 py-2.5 rounded-full shadow-md transition-transform duration-150 hover:-translate-y-[1px]"
+        >
+          GO TO STEP 2 – APPLICATION FORM
+        </button>
       </div>
     </section>
   </main>
 
   <script>
-    function goUpload(id) {
-      window.location.href = "upload-requirements.php?grant=" + id;
+    // Step 1 -> Step 2 (Application Form)
+    function goApply(id) {
+      var baseUrl = "isg-application-form.php"; // ilisi kung lahi imong Step 2 filename
+      if (id) {
+        window.location.href = baseUrl + "?grant=" + id;
+      } else {
+        window.location.href = baseUrl;
+      }
     }
   </script>
 </body>

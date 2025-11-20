@@ -71,7 +71,7 @@
 <header>
       <div class="header-top">
         <div class="header-left">
-          <img src="img/SMCCNEWLOGO.png" alt="Seal of Saint Michael College of Caraga" />
+          <img src="../img/SMCCNEWLOGO.png" alt="Seal of Saint Michael College of Caraga" />
           <div class="header-left-text">
             <h1 class="text-center">Saint Michael College of Caraga</h1>
             <p class="text-center">Brgy. 4, Nasipit, Agusan del Norte, Philippines<br>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="header-right">
-          <img src="img/SOCO-PAB-1024x672.jpg" alt="SOCOTEC ISO 9001 logo" />
+          <img src="../img/SOCO-PAB-1024x672.jpg" alt="SOCOTEC ISO 9001 logo" />
          
         </div>
       </div> 
@@ -105,13 +105,13 @@
      <div class="flex flex-wrap justify-between max-w-3xl mx-auto">
       <div class="flex flex-col space-y-1 w-1/2 min-w-[180px]">
        <label class="inline-flex items-center space-x-2">
-        <input class="w-4 h-4 border border-black" type="checkbox"/>
+        <input class="w-4 h-4 border border-black" type="checkbox" checked="checked"/>
         <span class="text-sm">
          Academic
         </span>
        </label>
        <label class="inline-flex items-center space-x-2">
-        <input class="w-4 h-4 border border-black" type="checkbox"/>
+        <input class="w-4 h-4 border border-black" type="checkbox" checked="checked"/>
         <span class="text-sm">
          Kabayani
         </span>
@@ -119,19 +119,19 @@
        <label class="text-xs pl-6 pt-0.5">
         Please specify:
         <span type="text" class="inline-block border-b border-black w-36">
-        <input type="text">
+        <input type="text" value="Academic Honors Grant">
         </span>
        </label>
       </div>
       <div class="flex flex-col space-y-1 w-1/2 min-w-[180px]">
        <label class="inline-flex items-center space-x-2">
-        <input class="w-4 h-4 border border-black" type="checkbox"/>
+        <input class="w-4 h-4 border border-black" type="checkbox" checked="checked"/>
         <span class="text-sm">
          Student Assistance
         </span>
        </label>
        <label class="inline-flex items-center space-x-2">
-        <input class="w-4 h-4 border border-black" type="checkbox"/>
+        <input class="w-4 h-4 border border-black" type="checkbox" checked="checked"/>
         <span class="text-sm">
          Others
         </span>
@@ -139,7 +139,7 @@
        <label class="text-xs pl-6 pt-0.5">
         Please specify:
         <span class="inline-block border-b border-black w-44">
-             <input type="text">
+             <input type="text" value="Not Applicable">
         </span>
        </label>
       </div>
@@ -161,6 +161,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Juan Dela Cruz
       </span>
      </div>
      <div class="flex items-center">
@@ -171,6 +172,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Bachelor of Science in Information Technology
       </span>
      </div>
      <div class="flex items-center">
@@ -181,6 +183,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      3rd Year
       </span>
      </div>
      <div class="flex items-center">
@@ -191,6 +194,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      2024-2025
       </span>
      </div>
      <div class="flex items-center">
@@ -201,6 +205,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      P-1 Brgy. 4, Nasipit, Agusan del Norte
       </span>
       <label class="ml-4 w-14">
        Gender
@@ -209,6 +214,7 @@
        :
       </span>
       <span class="border-b border-black w-20 ml-2 h-4">
+      Male
       </span>
      </div>
      <div class="flex items-center">
@@ -219,6 +225,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      January 15, 2004
       </span>
       <label class="ml-4 w-14">
        Age
@@ -227,6 +234,7 @@
        :
       </span>
       <span class="border-b border-black w-20 ml-2 h-4">
+      20
       </span>
      </div>
      <div class="flex items-center">
@@ -237,6 +245,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      0917-123-4567
       </span>
      </div>
      <div class="flex items-center">
@@ -247,6 +256,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      PHP 25,000
       </span>
      </div>
     </div>
@@ -260,11 +270,13 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Maria Santos Dela Cruz
       </span>
       <label class="ml-4 w-14">
        Age:
       </label>
       <span class="border-b border-black w-20 ml-2 h-4">
+      45
       </span>
      </div>
      <div class="flex items-center">
@@ -275,11 +287,13 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      0918-234-5678
       </span>
       <label class="ml-4 w-20">
        Occupation:
       </label>
       <span class="border-b border-black w-44 ml-2 h-4">
+      Elementary School Teacher
       </span>
      </div>
      <div class="flex items-center">
@@ -290,6 +304,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Nasipit Central Elementary School
       </span>
      </div>
      <div class="flex items-center">
@@ -300,6 +315,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Roxas St., Nasipit, Agusan del Norte
       </span>
      </div>
     </div>
@@ -313,11 +329,13 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Jose Ramon Dela Cruz
       </span>
       <label class="ml-4 w-14">
        Age:
       </label>
       <span class="border-b border-black w-20 ml-2 h-4">
+      48
       </span>
      </div>
      <div class="flex items-center">
@@ -328,11 +346,13 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      0919-345-6789
       </span>
       <label class="ml-4 w-20">
        Occupation:
       </label>
       <span class="border-b border-black w-44 ml-2 h-4">
+      Port Operations Supervisor
       </span>
      </div>
      <div class="flex items-center">
@@ -343,6 +363,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Nasipit International Port
       </span>
      </div>
      <div class="flex items-center">
@@ -353,6 +374,7 @@
        :
       </span>
       <span class="border-b border-black flex-grow ml-2 h-4">
+      Kaskag St., Nasipit, Agusan del Norte
       </span>
      </div>
     </div>
@@ -411,7 +433,7 @@
     
 <div class="max-w-3xl mx-auto">
   <div class="flex items-center">
-    <img src="img/box.png" alt="Box" class="w-48 h-auto" />
+    <img src="../img/box.png" alt="Box" class="w-48 h-auto" />
   </div>
 </div>
 
@@ -422,7 +444,7 @@
 
 <footer class="max-w-3xl mx-auto">
   <div class="flex items-center justify-between text-[10px] font-semibold text-black">
-  <img src="img/footer.png"/>
+  <img src="../img/footer.png"/>
   </div>
 </footer>
 

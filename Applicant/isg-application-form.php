@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ISG Application Form • Step 1</title>
+  <title>ISG Application Form • Step 2</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     rel="stylesheet"
@@ -22,7 +22,7 @@
 
 <body class="min-h-screen bg-gradient-to-b from-[#e0f2ff] via-white to-[#e0f2ff]">
   <!-- TOP BAR / BRAND -->
-  <header class="bg-gradient-to-r from-[#052c6a] via-[#0d8ddb] to-[#1d4ed8] shadow-md">
+  <header class="sticky top-0 z-20 bg-gradient-to-r from-[#052c6a] via-[#0d8ddb] to-[#1d4ed8] shadow-md">
     <div class="max-w-5xl mx-auto flex items-center gap-3 px-4 sm:px-6 py-3">
       <!-- LOGO -->
       <div class="flex items-center justify-center">
@@ -38,52 +38,107 @@
         <p class="text-[10px] sm:text-xs text-blue-100 uppercase tracking-[0.18em]">
           SMCC Admission and Scholarship Office
         </p>
-        <h1 class="text-white text-sm sm:text-base font-semibold leading-tight">
-          Institutional Scholarship Grants • Step 1
-        </h1>
+        <div class="flex flex-wrap items-center gap-2">
+          <h1 class="text-white text-sm sm:text-base font-semibold leading-tight">
+            Institutional Scholarship Grants
+          </h1>
+          <span class="inline-flex items-center gap-1 px-2 py-[2px] rounded-full bg-white/10 text-[10px] sm:text-[11px] text-blue-50">
+            <i class="fas fa-clipboard-list text-[10px]"></i>
+            Step 2 of 3
+          </span>
+        </div>
         <p class="text-[10px] sm:text-xs text-blue-100">
-          Application Form for Institutional Scholars/Grantees
+          Application Form for Institutional Scholars / Grantees
         </p>
       </div>
     </div>
   </header>
 
+  <!-- MAIN WRAPPER -->
   <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8" tabindex="-1">
     <!-- PAGE TITLE + STEP -->
-    <section class="text-center mb-6 sm:mb-8 space-y-2">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#052c6a] leading-tight">
-        APPLICATION FORM
-      </h2>
-      <p class="text-xs sm:text-sm text-[#052c6a]/80">
-        For Institutional Scholars / Grantees of Saint Michael College of Caraga
-      </p>
-      <div class="inline-flex items-center gap-2 bg-[#e0ecff] text-[#052c6a] px-3 py-1 rounded-full text-[11px] sm:text-xs mt-1">
-        <span class="w-2 h-2 rounded-full bg-[#0d8ddb]"></span>
-        <span class="font-semibold tracking-wide uppercase">Step 1: Application Details</span>
+    <section class="mb-6 sm:mb-8 space-y-4">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#052c6a] leading-tight">
+          APPLICATION FORM
+        </h2>
+        <p class="text-xs sm:text-sm text-[#052c6a]/80">
+          For Institutional Scholars / Grantees of Saint Michael College of Caraga
+        </p>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="max-w-md mx-auto">
+        <div class="flex items-center justify-between text-[11px] sm:text-xs font-semibold text-[#052c6a]/80 mb-1">
+          <span>Step 1: List & Requirements</span>
+          <span class="text-[#0d8ddb]">Step 2: Application Form</span>
+          <span>Step 3: Upload Requirements</span>
+        </div>
+        <div class="h-1.5 rounded-full bg-[#dbe6ff] overflow-hidden">
+          <div class="h-full w-2/3 bg-gradient-to-r from-[#0d8ddb] via-[#0d8ddb] to-[#fcdc2f]"></div>
+        </div>
+      </div>
+
+      <!-- SELECTED GRANT SUMMARY -->
+      <div class="max-w-xl mx-auto">
+        <div class="bg-white/95 border border-[#cddfff] rounded-2xl px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-sm">
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#0d8ddb]/10 text-[#0d8ddb]">
+              <i class="fas fa-award text-sm"></i>
+            </div>
+            <div>
+              <p class="text-[11px] sm:text-xs font-semibold text-[#052c6a]/70 uppercase tracking-[0.16em]">
+                Selected Scholarship / Grant
+              </p>
+              <p id="selectedGrantLabel" class="text-xs sm:text-sm font-semibold text-[#052c6a]">
+                Loading selected grant...
+              </p>
+              <p class="text-[10px] sm:text-[11px] text-[#052c6a]/70">
+                This is based on what you chose in Step 1.
+              </p>
+            </div>
+          </div>
+          <a
+            href="applicationReq.php"
+            class="inline-flex items-center gap-1 text-[10px] sm:text-xs text-[#0d8ddb] font-semibold hover:underline"
+          >
+            <i class="fas fa-chevron-left text-[9px]"></i>
+            Back to Step 1
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- FORM CARD -->
-    <section class="bg-white/95 backdrop-blur rounded-2xl sm:rounded-3xl shadow-lg border border-[#cddfff] p-4 sm:p-6 lg:p-8">
-      <form
-        action="#"
-        method="POST"
-        novalidate
-        class="space-y-8 sm:space-y-10"
-      >
+    <section
+      class="bg-white/95 backdrop-blur rounded-2xl sm:rounded-3xl shadow-xl border border-[#cddfff] p-4 sm:p-6 lg:p-8 relative overflow-hidden"
+    >
+      <!-- subtle background icon -->
+      <div class="pointer-events-none absolute -right-4 -top-4 opacity-5 sm:opacity-10 text-[#0d8ddb] text-6xl sm:text-8xl">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+
+      <form action="upload-requirements.php" method="POST" novalidate class="space-y-8 sm:space-y-10 relative z-10">
+        <!-- Hidden field to carry grant id -->
+        <input type="hidden" name="grant_id" id="grantIdField" />
+
         <!-- Type of Scholarship/Grant -->
         <fieldset class="border border-[#0d8ddb]/40 rounded-2xl p-4 sm:p-6 bg-[#f9fbff]">
-          <legend class="px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
-            Type of Scholarship/Grant
+          <legend class="inline-flex items-center gap-2 px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#0d8ddb]/10 text-[#0d8ddb]">
+              <i class="fas fa-award text-xs"></i>
+            </span>
+            <span>Type of Scholarship / Grant</span>
           </legend>
 
           <p class="mt-2 text-[11px] sm:text-xs text-[#052c6a]/70">
-            Please select the type of scholarship or grant you are applying for and specify if needed.
+            Please select the type of scholarship or grant you are applying for. This will help the office
+            categorize your application.
           </p>
 
           <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
+            <div class="space-y-3">
+              <label class="flex items-center gap-2 rounded-2xl border border-transparent bg-white px-3 py-2 shadow-sm hover:border-[#0d8ddb]/60 cursor-pointer transition">
                 <input
                   class="h-4 w-4 text-[#0d8ddb] focus:ring-[#fcdc2f] border-gray-300"
                   id="academic"
@@ -92,12 +147,10 @@
                   value="Academic"
                   required
                 />
-                <label class="text-sm sm:text-base text-[#052c6a] font-medium" for="academic">
-                  Academic
-                </label>
-              </div>
+                <span class="text-sm sm:text-base text-[#052c6a] font-medium">Academic</span>
+              </label>
 
-              <div class="flex items-center gap-2">
+              <label class="flex items-center gap-2 rounded-2xl border border-transparent bg-white px-3 py-2 shadow-sm hover:border-[#0d8ddb]/60 cursor-pointer transition">
                 <input
                   class="h-4 w-4 text-[#0d8ddb] focus:ring-[#fcdc2f] border-gray-300"
                   id="kabayani"
@@ -105,10 +158,8 @@
                   type="radio"
                   value="Kabayani"
                 />
-                <label class="text-sm sm:text-base text-[#052c6a] font-medium" for="kabayani">
-                  Kabayani
-                </label>
-              </div>
+                <span class="text-sm sm:text-base text-[#052c6a] font-medium">Kabayani</span>
+              </label>
 
               <div>
                 <label
@@ -128,8 +179,8 @@
               </div>
             </div>
 
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
+            <div class="space-y-3">
+              <label class="flex items-center gap-2 rounded-2xl border border-transparent bg-white px-3 py-2 shadow-sm hover:border-[#0d8ddb]/60 cursor-pointer transition">
                 <input
                   class="h-4 w-4 text-[#0d8ddb] focus:ring-[#fcdc2f] border-gray-300"
                   id="studentAssistance"
@@ -137,12 +188,10 @@
                   type="radio"
                   value="Student Assistance"
                 />
-                <label class="text-sm sm:text-base text-[#052c6a] font-medium" for="studentAssistance">
-                  Student Assistant
-                </label>
-              </div>
+                <span class="text-sm sm:text-base text-[#052c6a] font-medium">Student Assistant</span>
+              </label>
 
-              <div class="flex items-center gap-2">
+              <label class="flex items-center gap-2 rounded-2xl border border-transparent bg-white px-3 py-2 shadow-sm hover:border-[#0d8ddb]/60 cursor-pointer transition">
                 <input
                   class="h-4 w-4 text-[#0d8ddb] focus:ring-[#fcdc2f] border-gray-300"
                   id="others"
@@ -150,24 +199,22 @@
                   type="radio"
                   value="Others"
                 />
-                <label class="text-sm sm:text-base text-[#052c6a] font-medium" for="others">
-                  Others
-                </label>
-              </div>
+                <span class="text-sm sm:text-base text-[#052c6a] font-medium">Others / Discounts</span>
+              </label>
 
               <div>
                 <label
                   class="block text-[12px] sm:text-sm text-[#052c6a] font-medium mb-1"
                   for="othersSpecify"
                 >
-                  Please specify (if Others):
+                  Please specify (if Others / Discount):
                 </label>
                 <input
                   class="w-full border border-[#0d8ddb]/60 rounded-xl px-3 py-2 text-xs sm:text-sm
                          focus:outline-none focus:ring-2 focus:ring-[#fcdc2f] focus:border-[#0d8ddb]"
                   id="othersSpecify"
                   name="othersSpecify"
-                  placeholder="Specify other type of scholarship or grant"
+                  placeholder="Specify other grant/discount (e.g. PWD, Alumni, DXSM-FM, etc.)"
                   type="text"
                 />
               </div>
@@ -177,8 +224,11 @@
 
         <!-- Scholar/Grantee's Profile -->
         <fieldset class="border border-[#0d8ddb]/40 rounded-2xl p-4 sm:p-6 bg-white">
-          <legend class="px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
-            Scholar/Grantee's Profile
+          <legend class="inline-flex items-center gap-2 px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#0d8ddb]/10 text-[#0d8ddb]">
+              <i class="fas fa-user text-xs"></i>
+            </span>
+            <span>Scholar / Grantee's Profile</span>
           </legend>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-4">
@@ -199,7 +249,7 @@
 
             <div>
               <label class="block text-sm text-[#052c6a] font-semibold mb-1.5" for="programCourse">
-                Program/Course Enrolled <span class="text-red-600">*</span>
+                Program / Course Enrolled <span class="text-red-600">*</span>
               </label>
               <input
                 class="w-full border border-[#0d8ddb]/60 rounded-xl px-3 py-2 text-sm
@@ -344,8 +394,11 @@
 
         <!-- Mother's Information -->
         <fieldset class="border border-[#0d8ddb]/40 rounded-2xl p-4 sm:p-6 bg-[#f9fbff]">
-          <legend class="px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
-            Mother's Information
+          <legend class="inline-flex items-center gap-2 px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#0d8ddb]/10 text-[#0d8ddb]">
+              <i class="fas fa-female text-xs"></i>
+            </span>
+            <span>Mother's Information</span>
           </legend>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-4">
@@ -439,8 +492,11 @@
 
         <!-- Father's Information -->
         <fieldset class="border border-[#0d8ddb]/40 rounded-2xl p-4 sm:p-6 bg-white">
-          <legend class="px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
-            Father's Information
+          <legend class="inline-flex items-center gap-2 px-2 text-base sm:text-lg font-semibold text-[#052c6a]">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#0d8ddb]/10 text-[#0d8ddb]">
+              <i class="fas fa-male text-xs"></i>
+            </span>
+            <span>Father's Information</span>
           </legend>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-4">
@@ -535,22 +591,75 @@
         <!-- BUTTONS -->
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p class="text-[11px] sm:text-xs text-[#052c6a]/70 text-center sm:text-left">
-            After submitting this form, you will proceed to <span class="font-semibold">Step 2</span>
-            to upload your documentary requirements.
+            After submitting this form, you will proceed to
+            <span class="font-semibold text-[#052c6a]">Step 3: Upload Requirements</span>
+            for the grant you selected.
           </p>
 
           <button
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2
                    bg-[#0d8ddb] text-white font-semibold px-8 py-2.5 rounded-full
-                   shadow-md hover:bg-[#0b63d1] active:scale-[0.99] transition"
+                   shadow-md hover:bg-[#0b63d1] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0d8ddb] focus:ring-offset-white transition"
             type="submit"
           >
-            <span>Submit Application</span>
+            <span>Submit &amp; Go to Step 3</span>
             <i class="fas fa-arrow-right text-xs"></i>
           </button>
         </div>
       </form>
     </section>
   </main>
+
+  <script>
+    // helper: get query param
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    // map grant id to label (same order as Step 1)
+    const grantNames = {
+      1: 'Student Assistant',
+      2: 'Academic Scholarship Program',
+      3: 'Executive Student Government (ESG) President Scholarship Program',
+      4: 'Kabayani Scholarship Program',
+      5: 'Kabayani Loyalty Grant',
+      6: 'Discount for Persons with Disability (PWD)',
+      7: 'Discount for Children of Employees',
+      8: 'Discount for Sibling of Employees',
+      9: 'Sibling Discount',
+      10: 'DXSM-FM Grant',
+      11: 'Michaelinian Mirror Grant (Editor-in-Chief)',
+      12: 'Grant for the Dependents of a Lot Donor',
+      13: 'Grant for the Dependents of a Board of Trustees (BOT) Member',
+      14: 'SMCC Alumni Discount'
+    };
+
+    const grantIdFromUrl = getQueryParam('grant');
+    const grantLabelEl = document.getElementById('selectedGrantLabel');
+    const grantIdField = document.getElementById('grantIdField');
+
+    if (grantIdFromUrl && grantNames[grantIdFromUrl]) {
+      grantLabelEl.textContent = grantNames[grantIdFromUrl] + ' (Grant #' + grantIdFromUrl + ')';
+      grantIdField.value = grantIdFromUrl;
+    } else {
+      grantLabelEl.textContent = 'No specific grant selected. You may go back to Step 1 to choose a grant.';
+      grantIdField.value = '';
+    }
+
+    // optional: auto-select scholarship type based on grant id
+    if (grantIdFromUrl) {
+      const idNum = parseInt(grantIdFromUrl, 10);
+      if (idNum === 1 && document.getElementById('studentAssistance')) {
+        document.getElementById('studentAssistance').checked = true;
+      } else if (idNum === 2 && document.getElementById('academic')) {
+        document.getElementById('academic').checked = true;
+      } else if (idNum === 4 && document.getElementById('kabayani')) {
+        document.getElementById('kabayani').checked = true;
+      } else if (document.getElementById('others')) {
+        document.getElementById('others').checked = true;
+      }
+    }
+  </script>
 </body>
 </html>
