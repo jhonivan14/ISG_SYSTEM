@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>Admin Login</title>
+  <title>Head Login • SMCC ISG</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -99,7 +99,7 @@
       </div>
 
       <h1 class="text-white text-3xl font-semibold text-center mb-6">
-        Admin Login
+        Department Head Login
       </h1>
 
       <form method="POST" class="space-y-6">
