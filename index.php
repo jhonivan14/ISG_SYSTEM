@@ -41,7 +41,7 @@
     </p>
     <button
       class="mt-6 md:mt-8 bg-yellow-400 text-black font-medium rounded-md px-5 py-2.5 md:px-6 md:py-2 text-base md:text-lg hover:bg-yellow-500 transition"
-      type="button" onclick="window.location.href='portal.html'"
+      type="button" onclick="window.location.href='Applicant/applicationReq.php'"
     >
       Proceed to Application
     </button>
@@ -83,7 +83,7 @@
           <h3 class="font-extrabold text-lg mb-4 text-[#222222]">Admin</h3>
           <button
             class="bg-yellow-400 text-black font-medium rounded-md w-full py-2 hover:bg-yellow-500 transition"
-            type="button" onclick="window.location.href='adminLogin.html'"
+            type="button" onclick="window.location.href='Admin/adminLogin.php'"
           >
             Login
           </button>

@@ -85,7 +85,7 @@
       
      </div>
      <button class="w-full bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-bold py-3 rounded-lg shadow-md transition-colors duration-300"
-      type="button" onclick="window.location.href='adminDashboard.html'">
+      type="button" onclick="window.location.href='adminDashboard.php'">
       Log In
      </button>
     </form>
