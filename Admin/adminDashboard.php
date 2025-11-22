@@ -131,10 +131,40 @@
               class="flex items-center gap-2 px-4 py-3 hover:bg-[#0d8ddb] cursor-pointer"
             >
               <i class="fas fa-user-circle w-5"></i>
-              <span>Profile</span>
+              <span>Accounts</span>
             </li>
           </ul>
         </nav>
+       
+        <div class="absolute bottom-0 left-0 w-full">
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-[#0d8ddb] to-transparent opacity-60"></div>
+
+   
+        <div class="px-4 pt-2 pb-1 flex items-center gap-2 text-[11px] text-blue-100/90">
+        <div class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center">
+        <i class="fas fa-user-shield text-[12px]"></i>
+        </div>
+        <div class="leading-tight">
+        <p class="font-semibold">Admin Account</p>
+        <p class="text-[10px] text-blue-200/80">Institutional Scholarship</p>
+        </div>
+        </div>
+
+    <!-- Logout button -->
+    <div class="px-3 pb-3 pt-1">
+      <button
+        onclick="window.location.href='../logout.php'"
+        class="w-full flex items-center justify-center gap-2 text-[11px] font-semibold
+               bg-gradient-to-r from-red-500 to-red-600
+               hover:from-red-600 hover:to-red-700
+               px-3 py-2 rounded-full shadow-md hover:shadow-lg
+               transition-all duration-150"
+      >
+        <i class="fas fa-sign-out-alt text-xs"></i>
+        <span>Logout</span>
+      </button>
+    </div>
+  </div>
       </aside>
 
       <!-- Main content -->
